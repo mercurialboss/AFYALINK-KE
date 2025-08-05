@@ -1,0 +1,146 @@
+constst HomePage = () => {
+  React.useEffect(() => {
+    console.log('Analytics tracking initialized');
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-white px-4 py-10 md:px-16 lg:px-32">
+      <style>{customStyles}</style>
+
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold text-blue-600">AfyaLink</h1>
+        <p className="text-gray-600 mt-2 text-lg">
+          Student-led Mobile Health Platform for NCD Education & Monitoring in Kenya
+        </p>
+        <img
+          src="https://via.placeholder.com/400x200?text=NCD+Infographic"
+          alt="NCD Statistics: 8.7% of Kenyan women have hypertension"
+          className="mt-4 mx-auto max-w-md rounded-lg shadow-md"
+        />
+      </header>
+
+      <div className="flex justify-end mb-6">
+        <Select defaultValue="en">
+          <SelectTrigger className="w-40 border-pink-300" aria-label="Select Language">
+            <span className="text-gray-700">Select Language</span>
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="en">English</SelectItem>
+            <SelectItem value="sw">Swahili</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      <section className="grid md:grid-cols-2 gap-10 mb-16">
+        <Card className="shadow-md bg-pink-100">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-blue-600 mb-4">What is AfyaLink?</h2>
+            <p className="text-gray-700">
+              AfyaLink is a student-initiated telemedicine MVP focused on education,
+              tracking, and community support for Non-Communicable Diseases (NCDs)
+              like hypertension and diabetes in Kenya. It empowers patients and
+              community health workers (CHWs) through accessible mobile technology.
+              <br /><br />
+              This project is led by <strong>Lawrence Keya</strong>, a third-year student pursuing a Bachelor of Science in Clinical Medicine at Egerton University.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-md bg-pink-100">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-blue-600 mb-4">Features</h2>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Educational content in English and Swahili</li>
+              <li>Blood pressure and glucose level logging with SMS reminders</li>
+              <li>User-friendly app and CHW dashboard with live demo</li>
+              <li>Offline access for remote areas</li>
+              <li>Startup Toolkit: Grants, student collaborations, mentorship</li>
+            </ul>
+            <Button className="mt-4 bg-red-600 hover:bg-red-700 text-white" asChild>
+              <a href="https://afyalink-demo.glideapp.io" target="_blank" rel="noopener noreferrer">
+                Try the Demo
+              </a>
+            </Button>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mb-16">
+        <Card className="shadow-md bg-pink-100">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-blue-600 mb-4">What People Say</h2>
+            <p className="text-gray-700 italic">
+              “AfyaLink’s approach to NCD management is promising for rural communities.”<br />
+              — Dr. Jane Doe, Community Health Worker, Londiani
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mb-16">
+        <Card className="shadow-md bg-pink-100">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-blue-600 mb-4">Get Involved</h2>
+            <p className="text-gray-700 mb-4">
+              Are you a student, CHW, clinic, or investor? Join AfyaLink’s mission!
+            </p>
+            <form className="grid gap-4">
+              <Input placeholder="Your Name" aria-label="Your Name" className="border-pink-300" />
+              <Input type="email" placeholder="Email Address" aria-label="Email Address" className="border-pink-300" />
+              <Textarea placeholder="How would you like to get involved?" aria-label="Involvement Details" className="border-pink-300" />
+              <div className="flex gap-4">
+                <Button className="bg-red-600 hover:bg-red-700 text-white">Join as a CHW</Button>
+                <Button className="bg-red-600 hover:bg-red-700 text-white">Partner as a Clinic</Button>
+                <Button className="bg-red-600 hover:bg-red-700 text-white">Invest in AfyaLink</Button>
+              </div>
+            </form>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mb-16">
+        <Card className="shadow-md bg-pink-100">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-blue-600 mb-4">Resources for Student Innovators</h2>
+            <p className="text-gray-700 mb-4">
+              AfyaLink is committed to inspiring student innovators across Kenya.
+              Explore these resources to start your health-tech journey:
+            </p>
+            <ul className="list-disc list-inside text-gray-700">
+              <li><strong>Grants:</strong> Grand Challenges Africa, Hult Prize, Safaricom Foundation</li>
+              <li><strong>Incubators:</strong> Egerton Innovation Hub, Strathmore iLab, C4DLab</li>
+              <li><strong>Mentorship:</strong> Connect with CHWs, lecturers, NGOs</li>
+              <li><strong>Tools:</strong> Canva, Trello, Google Forms, Glide, Bubble</li>
+              <li><strong>Pitch Deck Templates</strong> (request via form)</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mb-20">
+        <Card className="shadow-md bg-pink-100">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-blue-600 mb-4">Investor Pitch</h2>
+            <ul className="list-disc list-inside text-gray-700">
+              <li><strong>Problem:</strong> NCDs affect millions in Kenya, with limited rural access to care.</li>
+              <li><strong>Solution:</strong> AfyaLink’s mobile app offers education, tracking, and CHW support.</li>
+              <li><strong>Traction:</strong> Planned pilot in Londiani with 50 patients and 5 CHWs.</li>
+              <li><strong>Ask:</strong> $5,000 for MVP scale-up and CHW training.</li>
+            </ul>
+            <Button className="mt-4 bg-red-600 hover:bg-red-700 text-white" asChild>
+              <a href="https://via.placeholder.com/150?text=Pitch+Deck" download>
+                Download Full Pitch Deck
+              </a>
+            </Button>
+          </CardContent>
+        </Card>
+      </section>
+
+      <footer className="text-center text-gray-500 text-sm mt-20">
+        &copy; {new Date().getFullYear()} AfyaLink. Created by Lawrence Keya, Egerton University. Empowering local health innovation for a better Kenya.
+      </footer>
+    </div>
+  );
+};
+
+export default HomePage;
